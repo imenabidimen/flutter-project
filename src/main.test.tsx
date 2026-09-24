@@ -1,1 +1,1 @@
-import{describe,it,expect}from'vitest';import{render,screen}from'@testing-library/react';import React from'react';describe('ClientHub',()=>{it('keeps the authentication contract explicit',()=>{localStorage.setItem('accessToken','demo');expect(localStorage.getItem('accessToken')).toBe('demo')})})
+import{describe,it,expect}from'vitest';describe('ClientHub',()=>{it('keeps the authentication contract explicit',()=>{localStorage.setItem('accessToken','demo');expect(localStorage.getItem('accessToken')).toBe('demo')})})
