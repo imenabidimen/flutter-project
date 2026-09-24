@@ -1,22 +1,21 @@
-# PocketLedger
+# ClientHub — React + TypeScript
 
-A clean Flutter expense tracker with an offline-first local store, category budgets and a small dashboard.
+A customer-support workspace frontend designed to consume a full-stack API. Built to show practical React engineering rather than a tutorial demo.
 
-## What it demonstrates
-- Flutter + Dart
-- Material 3 UI with simple, reusable widgets
-- Repository pattern with an in-memory/local JSON data source
-- Form validation and predictable state management
-- Filtering, monthly totals and budget progress
-- Unit and widget tests
-- GitHub Actions CI
+**Stack:** React, TypeScript, Vite, React Router, Vitest.
 
-## Run it
+### Features
+- Authentication/login state
+- Protected-workspace pattern
+- Customer search
+- Customer creation flow
+- Logout/session clearing
+- Responsive dashboard UI
+- Testable application boundaries
 
+### Run
 ```bash
-flutter pub get
-flutter test
-flutter run
+npm install
+npm run dev
+npm test
 ```
-
-The app is intentionally product-like rather than tutorial-like: empty states, validation, persistence and error handling are included.
