@@ -1,0 +1,5 @@
+import 'package:flutter/material.dart';
+void main()=>runApp(const PocketLedgerApp());
+class PocketLedgerApp extends StatelessWidget{const PocketLedgerApp({super.key});Widget build(BuildContext c)=>MaterialApp(title:'PocketLedger',theme:ThemeData(useMaterial3:true,colorSchemeSeed:Colors.indigo),home:const LedgerHome());}
+class LedgerHome extends StatefulWidget{const LedgerHome({super.key});State<LedgerHome> createState()=>_LedgerHomeState();}
+class _LedgerHomeState extends State<LedgerHome>{final entries=<Map<String,Object>>[];Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('PocketLedger')),body:entries.isEmpty?const Center(child:Text('No expenses yet')):ListView.builder(itemCount:entries.length,itemBuilder:(_,i)=>ListTile(title:Text(entries[i]['title'] as String),trailing:Text('\$'+(entries[i]['amount'] as double).toStringAsFixed(2)))),floatingActionButton:FloatingActionButton.extended(onPressed:()=>setState(()=>entries.add({'title':'Coffee','amount':3.50})),icon:const Icon(Icons.add),label:const Text('Expense')));}
